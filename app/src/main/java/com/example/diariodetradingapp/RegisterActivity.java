@@ -35,8 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        inicializarComponentes();
-
+        initializeComponents();
 
         gologIn();
 
@@ -45,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = txtEmail.getText().toString();
 
-                comprobarEmail(email);
+                checkEmail(email);
 
                 if (txtEmail.getText().toString().equals(txtConfirmEmail.getText().toString()) &&
                         txtPassword.getText().toString().equals(txtConfirmPassword.getText().toString())){
@@ -59,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void comprobarEmail(String email) {
+    private void checkEmail(String email) {
         auth.fetchSignInMethodsForEmail(email)
                 .addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
                     @Override
@@ -115,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void inicializarComponentes() {
+    private void initializeComponents() {
         txtEmail = findViewById(R.id.txtEmailRegisterActivity);
         txtConfirmEmail = findViewById(R.id.txtConfirmEmailRegisterActivity);
         txtPassword = findViewById(R.id.txtPasswordRegisterActivity);

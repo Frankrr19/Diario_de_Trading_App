@@ -21,12 +21,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inicializarComponentes();
+        initializeComponents();
 
-        registrar();
+        goRegister();
     }
 
-    private void registrar() {
+    private void goRegister() {
         lblSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void inicializarComponentes() {
+    private void initializeComponents() {
         txtEmail = findViewById(R.id.txtEmailLoginActivity);
         txtPassword = findViewById(R.id.txtPasswordLoginActivity);
         btnLogin = findViewById(R.id.btnLoginLoginActivity);
