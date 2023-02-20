@@ -46,20 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = txtEmail.getText().toString();
-                String confirmEmail = txtConfirmEmail.getText().toString();
-                String password = txtPassword.getText().toString();
-                String confirmPassword = txtConfirmPassword.getText().toString();
-
                 comprobarEmail(email);
-/*
-                if (email.equals(confirmEmail) && password.equals(confirmPassword)){
-                    if (!email.isEmpty() && !password.isEmpty()){
-                        doRegister(email,password);
-                    }
-                }
-
- */
-
             }
         });
     }
