@@ -46,7 +46,14 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = txtEmail.getText().toString();
-                comprobarEmail(email);
+                //comprobarEmail(email);
+
+                if (txtEmail.getText().toString().equals(txtConfirmEmail.getText().toString()) &&
+                        txtPassword.getText().toString().equals(txtConfirmPassword.getText().toString())){
+                    if (!txtEmail.getText().toString().isEmpty() && !txtPassword.getText().toString().isEmpty()){
+                        doRegister(email,txtPassword.getText().toString());
+                    }
+                }
             }
         });
     }
@@ -59,18 +66,15 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             SignInMethodQueryResult result = task.getResult();
                             if (result != null && result.getSignInMethods() != null && result.getSignInMethods().size() > 0){
-                                alertRegister(Constantes.TITULO_ERROR, Constantes.EMAIL_EXISTE).show();
+                                //alertRegister(Constantes.TITULO_ERROR, Constantes.EMAIL_EXISTE).show();
+                                Toast.makeText(RegisterActivity.this, "Email ya existe", Toast.LENGTH_SHORT).show();
                             }else{
-                                alertRegister(Constantes.TITULO_EXITO, Constantes.EMAIL_INEXISTE).show();
-                                if (txtEmail.getText().toString().equals(txtConfirmEmail.getText().toString()) &&
-                                    txtPassword.getText().toString().equals(txtConfirmPassword.getText().toString())){
-                                    if (!txtEmail.getText().toString().isEmpty() && !txtPassword.getText().toString().isEmpty()){
-                                        doRegister(email,txtPassword.getText().toString());
-                                    }
-                                }
+                                //alertRegister(Constantes.TITULO_EXITO, Constantes.EMAIL_INEXISTE).show();
+                                Toast.makeText(RegisterActivity.this, "Exito", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            alertRegister(Constantes.TITULO_ERROR,Constantes.ERROR_CONSULTA).show();
+                            //alertRegister(Constantes.TITULO_ERROR,Constantes.ERROR_CONSULTA).show();
+                            Toast.makeText(RegisterActivity.this, "Error consulta", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
