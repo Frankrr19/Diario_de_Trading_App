@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:fontFamily="@font/audiowide"
-        android:text="¿No tiene cuenta?"
+        android:text="@string/don_t_have_an_account"
         android:textColor="#373434"
         app:layout_constraintBaseline_toBaselineOf="@+id/lblSignUpLoginActivity"
         app:layout_constraintEnd_toStartOf="@+id/lblSignUpLoginActivity"
