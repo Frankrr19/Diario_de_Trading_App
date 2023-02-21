@@ -1,5 +1,6 @@
 package com.example.diariodetradingapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,8 +14,11 @@ import android.widget.Toast;
 
 import com.example.diariodetradingapp.modelos.User;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ConfigDatosPersonalesActivity extends AppCompatActivity {
     private EditText txtName;
@@ -30,6 +34,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_config_datos_personales);
 
         initializeComponents();
+        readUserConfig();
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +47,30 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void readUserConfig() {
+        refUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    txtName.setText(snapshot.child("name").getValue().toString());
+                    txtLastname.setText(snapshot.child("lastname").getValue().toString());
+                    txtEmail.setText(snapshot.child("email").getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(ConfigDatosPersonalesActivity.this, HomeActivity.class));
+        finish();
     }
 
     private void initializeComponents() {

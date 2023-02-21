@@ -17,4 +17,7 @@
     <string name="query_error">Error in the query, App failure</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="datos">Datos</string>
+    <string name="tittle_exit_app">Are you sure you want to exit the application?</string>
+    <string name="CONFIRM">CONFIRM</string>
+    <string name="CANCEL">CANCEL</string>
 </resources>
