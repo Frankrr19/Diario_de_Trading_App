@@ -21,6 +21,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
     private EditText txtLastname;
     private EditText txtEmail;
     private Button btnSave;
+    private String a;
     private FirebaseDatabase database;
     private DatabaseReference refUser;
     @Override
@@ -48,7 +49,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
         txtLastname = findViewById(R.id.txtLastnameCDPActivity);
         txtEmail = findViewById(R.id.txtEmailCDPActivity);
         btnSave = findViewById(R.id.btnSaveCDPActivity);
-
+        a = "a";
         database = FirebaseDatabase.getInstance("https://bd-diariotrading-default-rtdb.europe-west1.firebasedatabase.app/");
         refUser = database.getReference(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("datos_personales");
     }
