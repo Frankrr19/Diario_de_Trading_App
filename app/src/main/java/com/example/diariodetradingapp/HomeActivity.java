@@ -10,12 +10,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.diariodetradingapp.databinding.ActivityHome2Binding;
+
 public class HomeActivity extends AppCompatActivity {
 
+    private ActivityHome2Binding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home2);
+        binding = ActivityHome2Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 
     @Override

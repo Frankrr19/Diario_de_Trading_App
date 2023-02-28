@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diario de Trading App</string>
+    <string name="app_name">Diario de trading</string>
     <string name="email">Email</string>
     <string name="login">LOGIN</string>
     <string name="password">Password</string>
@@ -20,4 +20,5 @@
     <string name="tittle_exit_app">Are you sure you want to exit the application?</string>
     <string name="CONFIRM">CONFIRM</string>
     <string name="CANCEL">CANCEL</string>
+    <string name="title_activity_inicio">InicioActivity</string>
 </resources>
