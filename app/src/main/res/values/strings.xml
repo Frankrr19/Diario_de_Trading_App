@@ -39,7 +39,6 @@
 
     <string-array name="selectYear">
         <item> </item>
-        <item>2022</item>
         <item>2023</item>
         <item>2024</item>
         <item>2025</item>
@@ -50,6 +49,8 @@
         <item>2030</item>
         <item>2031</item>
         <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
     </string-array>
 
     <string-array name="selectDay">
