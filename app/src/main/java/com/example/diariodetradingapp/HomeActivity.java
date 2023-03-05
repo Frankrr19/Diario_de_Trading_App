@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.diariodetradingapp.databinding.ActivityHome2Binding;
 
@@ -28,6 +29,13 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(cabecera);
 
 
+        binding.imgAddTradeHomeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, CreateTradeActivity.class));
+                finish();
+            }
+        });
     }
 
     @Override
