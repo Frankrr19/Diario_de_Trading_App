@@ -21,4 +21,7 @@
     <string name="CONFIRM">CONFIRM</string>
     <string name="CANCEL">CANCEL</string>
     <string name="title_activity_inicio">InicioActivity</string>
+    <string name="trades">TRADES</string>
+    <string name="buy">BUY</string>
+    <string name="sell">SELL</string>
 </resources>

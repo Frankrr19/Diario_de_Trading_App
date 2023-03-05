@@ -3,6 +3,7 @@ package com.example.diariodetradingapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,11 +16,18 @@ import com.example.diariodetradingapp.databinding.ActivityHome2Binding;
 public class HomeActivity extends AppCompatActivity {
 
     private ActivityHome2Binding binding;
+
+    private Toolbar cabecera;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityHome2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        cabecera = findViewById(R.id.cabecera);
+        setSupportActionBar(cabecera);
+
+
     }
 
     @Override
