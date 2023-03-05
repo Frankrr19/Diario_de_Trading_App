@@ -56,7 +56,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/spEstateCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -82,7 +82,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner3"
+                    android:id="@+id/spEntryCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -108,7 +108,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner4"
+                    android:id="@+id/spYearCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -134,7 +134,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner5"
+                    android:id="@+id/spDayCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -160,7 +160,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner6"
+                    android:id="@+id/spMonthCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -186,7 +186,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner7"
+                    android:id="@+id/spMarketCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -212,8 +212,8 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal"
-                    android:layout_width="280dp"
+                    android:id="@+id/txtContractsCreateTrade"
+                    android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
@@ -239,8 +239,8 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal2"
-                    android:layout_width="280dp"
+                    android:id="@+id/txtPointValueCreateTrade"
+                    android:layout_width="248dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
@@ -266,8 +266,8 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal3"
-                    android:layout_width="280dp"
+                    android:id="@+id/txtPointsCreateTrade"
+                    android:layout_width="296dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
@@ -293,7 +293,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner8"
+                    android:id="@+id/spEmotionCreateTrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -301,7 +301,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnCreateCreateTrade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
