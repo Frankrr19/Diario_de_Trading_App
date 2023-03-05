@@ -13,6 +13,9 @@ public class Trade {
     private String emotion;
     private Float total;
 
+    public Trade() {
+    }
+
     public Trade(String state, String entry, int year, int day, String month, String market, Float contracts, Float pointValue, Float points, String emotion) {
         this.state = state;
         this.entry = entry;
