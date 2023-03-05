@@ -75,7 +75,7 @@
         android:layout_gravity="center"
         android:backgroundTint="#000000"
         android:fontFamily="@font/audiowide"
-        android:text="SAVE"
+        android:text="@string/save"
         app:cornerRadius="20dp" />
 
 </LinearLayout>

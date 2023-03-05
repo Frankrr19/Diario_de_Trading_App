@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="ADD TRADE"
+                        android:text="@string/add_trade"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="VIEW TRADES"
+                        android:text="@string/view_trades"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -182,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="NOTES"
+                        android:text="@string/notes"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -207,7 +207,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="STATS"
+                        android:text="@string/stats"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 

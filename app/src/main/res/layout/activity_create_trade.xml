@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/audiowide"
-                android:text="CREATE TRADE"
+                android:text="@string/create_trade"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="34sp"
@@ -52,7 +52,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="STATE:"
+                    android:text="@string/state"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -78,7 +78,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="ENTRY:"
+                    android:text="@string/entry"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -104,7 +104,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="YEAR:"
+                    android:text="@string/year"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="DAY:"
+                    android:text="@string/day"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -156,7 +156,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="MONTH:"
+                    android:text="@string/month"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -182,7 +182,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="MARKET:"
+                    android:text="@string/market"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -208,7 +208,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="CONTRACTS:"
+                    android:text="@string/contracts"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -235,7 +235,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="POINT VALUE:"
+                    android:text="@string/point_value"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -262,7 +262,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="POINTS:"
+                    android:text="@string/points"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -289,7 +289,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:fontFamily="@font/audiowide"
-                    android:text="EMOTION:"
+                    android:text="@string/emotion"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -308,7 +308,7 @@
                 android:layout_margin="15dp"
                 android:backgroundTint="@color/material_dynamic_neutral30"
                 android:fontFamily="@font/audiowide"
-                android:text="CREATE"
+                android:text="@string/create"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
