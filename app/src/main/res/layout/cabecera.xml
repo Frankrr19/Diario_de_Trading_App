@@ -4,7 +4,7 @@
     android:id="@+id/cabecera"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/material_dynamic_neutral30"
+    android:background="@color/green_light"
     app:title="Diario de trading"
     app:titleMarginStart="125dp"
     app:titleTextColor="#FFFEFE">

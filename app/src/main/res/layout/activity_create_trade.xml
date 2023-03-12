@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/material_dynamic_neutral60"
+        android:background="#87CFC0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +59,11 @@
                 <Spinner
                     android:id="@+id/spEstateCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -85,9 +87,11 @@
                 <Spinner
                     android:id="@+id/spEntryCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -111,9 +115,11 @@
                 <Spinner
                     android:id="@+id/spYearCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -137,9 +143,11 @@
                 <Spinner
                     android:id="@+id/spDayCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -163,9 +171,11 @@
                 <Spinner
                     android:id="@+id/spMonthCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -189,9 +199,11 @@
                 <Spinner
                     android:id="@+id/spMarketCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -216,7 +228,9 @@
                     android:id="@+id/txtContractsCreateTrade"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="0"
+                    android:background="#FAFAFA"
                     android:ems="10"
                     android:inputType="numberDecimal" />
             </LinearLayout>
@@ -243,7 +257,9 @@
                     android:id="@+id/txtPointValueCreateTrade"
                     android:layout_width="248dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="0"
+                    android:background="#FFFFFF"
                     android:ems="10"
                     android:inputType="numberDecimal" />
             </LinearLayout>
@@ -270,7 +286,9 @@
                     android:id="@+id/txtPointsCreateTrade"
                     android:layout_width="296dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="0"
+                    android:background="#FFFFFF"
                     android:ems="10"
                     android:inputType="numberDecimal" />
             </LinearLayout>
@@ -296,9 +314,10 @@
                 <Spinner
                     android:id="@+id/spEmotionCreateTrade"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="22dp"
                     android:layout_margin="10dp"
-                    android:layout_weight="10" />
+                    android:layout_weight="10"
+                    android:background="#FFFFFF" />
             </LinearLayout>
 
             <Button
@@ -306,7 +325,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:backgroundTint="@color/material_dynamic_neutral30"
+                android:backgroundTint="@color/green_light"
                 android:fontFamily="@font/audiowide"
                 android:text="@string/create"
                 android:textColor="#FFFFFF"

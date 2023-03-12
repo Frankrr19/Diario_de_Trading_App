@@ -10,12 +10,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/material_dynamic_neutral80"
+            android:background="#B5EFE3"
             android:orientation="vertical">
 
             <include
@@ -25,7 +29,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:backgroundTint="@color/material_dynamic_neutral30">
+                android:backgroundTint="#27C5A4">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +58,7 @@
                             android:layout_height="100dp"
                             android:layout_margin="40dp"
                             android:layout_weight="1"
-                            app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                            app:cardBackgroundColor="#87CFC0">
 
                             <TextView
                                 android:id="@+id/textView6"
@@ -81,7 +85,7 @@
                             android:layout_height="100dp"
                             android:layout_margin="40dp"
                             android:layout_weight="1"
-                            app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                            app:cardBackgroundColor="#87CFC0">
 
                             <TextView
                                 android:id="@+id/textView7"
@@ -117,7 +121,7 @@
                     android:layout_height="200dp"
                     android:layout_margin="30dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                    app:cardBackgroundColor="#87CFC0">
 
                     <TextView
                         android:id="@+id/textView9"
@@ -143,7 +147,7 @@
                     android:layout_height="200dp"
                     android:layout_margin="30dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                    app:cardBackgroundColor="#87CFC0">
 
                     <TextView
                         android:id="@+id/textView10"
@@ -166,7 +170,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -174,7 +178,7 @@
                     android:layout_height="200dp"
                     android:layout_margin="30dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                    app:cardBackgroundColor="#87CFC0">
 
                     <TextView
                         android:id="@+id/imgNotesHomeActivity"
@@ -199,7 +203,7 @@
                     android:layout_height="200dp"
                     android:layout_margin="30dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/material_dynamic_neutral60">
+                    app:cardBackgroundColor="#87CFC0">
 
                     <TextView
                         android:id="@+id/imgNotesTradesHomeActivity"

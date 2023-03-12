@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8D1D0"
+    android:background="#87CFC0"
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
@@ -94,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#B8D1D0"
+        android:background="#87CFC0"
         android:orientation="horizontal">
 
         <TextView
