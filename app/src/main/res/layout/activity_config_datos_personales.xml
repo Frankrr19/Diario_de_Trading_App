@@ -69,14 +69,44 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnSaveCDPActivity"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/green_light"
-        android:fontFamily="@font/audiowide"
-        android:text="@string/save"
-        app:cornerRadius="20dp" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSaveCDPActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/green_light"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/save"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnLogOutCDPActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/green_light"
+                android:text="@string/logout"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

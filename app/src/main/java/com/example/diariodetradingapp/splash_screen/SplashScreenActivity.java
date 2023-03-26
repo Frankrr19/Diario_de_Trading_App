@@ -38,7 +38,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 user = auth.getCurrentUser();
                 updateUI(user);
             }
-        }, 3000); // 3000 = 3 segundos de duración de la pantalla de bienvenida
+        }, 2000); // 2000 = 2 segundos de duración de la pantalla de bienvenida
 
 
     }

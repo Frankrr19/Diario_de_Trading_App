@@ -25,6 +25,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
     private EditText txtLastname;
     private EditText txtEmail;
     private Button btnSave;
+    private Button btnLogOut;
     private String a;
     private FirebaseDatabase database;
     private DatabaseReference refUser;
@@ -45,6 +46,15 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
                     startActivity(new Intent(ConfigDatosPersonalesActivity.this, HomeActivity.class));
                     finish();
                 }
+            }
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(ConfigDatosPersonalesActivity.this, LoginActivity.class));
+                finish();
             }
         });
     }
@@ -78,6 +88,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
         txtLastname = findViewById(R.id.txtLastnameCDPActivity);
         txtEmail = findViewById(R.id.txtEmailCDPActivity);
         btnSave = findViewById(R.id.btnSaveCDPActivity);
+        btnLogOut = findViewById(R.id.btnLogOutCDPActivity);
         a = "a";
         database = FirebaseDatabase.getInstance("https://bd-diariotrading-default-rtdb.europe-west1.firebasedatabase.app/");
         refUser = database.getReference(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("datos_personales");

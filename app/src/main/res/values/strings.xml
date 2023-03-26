@@ -42,6 +42,8 @@
     <string name="notes">NOTES</string>
     <string name="stats">STATS</string>
     <string name="register">REGISTER</string>
+    <string name="logout">LOGOUT</string>
+    <string name="sign_in_with_google">sign in with google</string>
 
     <string-array name="selectState">
         <item> </item>
