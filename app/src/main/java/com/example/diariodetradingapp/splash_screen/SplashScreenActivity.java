@@ -26,21 +26,21 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         initializeComponents();
-        handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashScreenActivity.this, HomeActivity.class));
-            }
-        }, 4000); // 4000 = 4 segundos de duración de la pantalla de bienvenida
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        user = auth.getCurrentUser();
-        updateUI(user);
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                user = auth.getCurrentUser();
+                updateUI(user);
+            }
+        }, 3000); // 3000 = 3 segundos de duración de la pantalla de bienvenida
+
+
     }
 
     private void updateUI(FirebaseUser user) {
