@@ -36,6 +36,14 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        binding.imgSeeTradesHomeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, SeeTradesActivity.class));
+                finish();
+            }
+        });
     }
 
     @Override
