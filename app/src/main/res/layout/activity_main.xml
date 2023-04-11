@@ -82,10 +82,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
+        android:layout_marginBottom="55dp"
         android:fontFamily="@font/audiowide"
         android:text="@string/don_t_have_an_account"
         android:textColor="#373434"
-        app:layout_constraintBaseline_toBaselineOf="@+id/lblSignUpLoginActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lblSignUpLoginActivity"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -105,7 +106,7 @@
 
     <Button
         android:id="@+id/btnGoogleLoginActivity"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="45dp"
