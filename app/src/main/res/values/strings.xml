@@ -45,6 +45,11 @@
     <string name="logout">LOGOUT</string>
     <string name="sign_in_with_google">sign in with google</string>
     <string name="default_web_client_id1" translatable="false">23537378334-eh1hu3kun56e6v97v320vk3e99btikc8.apps.googleusercontent.com</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="review">REVIEW:</string>
+    <string name="barra">/</string>
+    <string name="eliminarTrade">Are you sure you want to delete this trade?</string>
+    <string name="lista_trades">TRADES:</string>
 
     <string-array name="selectState">
         <item> </item>
