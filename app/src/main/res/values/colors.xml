@@ -12,4 +12,6 @@
     <color name="material_dynamic_neutral30">#454749</color>
     <color name="material_dynamic_neutral60">#8F9193</color>
     <color name="material_dynamic_neutral80">#C5C7C9</color>
+    <color name="color_fondo_app">#87CFC0</color>
+
 </resources>

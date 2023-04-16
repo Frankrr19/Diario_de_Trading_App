@@ -50,6 +50,11 @@
     <string name="barra">/</string>
     <string name="eliminarTrade">Are you sure you want to delete this trade?</string>
     <string name="lista_trades">TRADES:</string>
+    <string name="cero">0</string>
+    <string name="total">TOTAL:</string>
+    <string name="titulo_edit_trade">Edit Trade</string>
+    <string name="titulo_see_trade">See Trade</string>
+    <string name="cerrar">CLOSE</string>
 
     <string-array name="selectState">
         <item> </item>

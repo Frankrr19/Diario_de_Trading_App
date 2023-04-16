@@ -99,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/green_light"
+            android:tint="#EC0B0B"
             app:srcCompat="@android:drawable/ic_delete" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
