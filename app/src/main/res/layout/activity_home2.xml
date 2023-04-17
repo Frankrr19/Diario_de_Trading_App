@@ -181,7 +181,7 @@
                     app:cardBackgroundColor="#87CFC0">
 
                     <TextView
-                        android:id="@+id/imgNotesHomeActivity"
+                        android:id="@+id/lblReview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -191,7 +191,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/imgReviewActivity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

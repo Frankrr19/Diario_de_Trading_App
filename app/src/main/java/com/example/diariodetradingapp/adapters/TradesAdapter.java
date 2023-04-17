@@ -95,7 +95,7 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
         lblPointValue.setText(String.valueOf(trade.getPointValue()));
         lblPoints.setText(String.valueOf(trade.getPoints()));
         lblEmotion.setText(trade.getEmotion());
-        lblTotal.setText(String.valueOf(trade.getTotal()));
+        lblTotal.setText(String.valueOf(trade.getTotal())+" $");
 
         builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
             @Override

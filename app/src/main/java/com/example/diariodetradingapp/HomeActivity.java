@@ -54,6 +54,14 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        binding.imgReviewActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, ReviewsActivity.class));
+                finish();
+            }
+        });
     }
     /*
     private void readUserConfig() {
