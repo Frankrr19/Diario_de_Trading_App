@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#87CFC0"
     android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#87CFC0">
+        android:background="@color/color_fondo_app">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,7 +23,7 @@
                 android:fontFamily="@font/audiowide"
                 android:text="@string/titulo_see_trade"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/green"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
@@ -49,7 +48,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/state"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -81,7 +80,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/entry"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -120,7 +119,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/year"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -152,7 +151,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/day"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -191,7 +190,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/month"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -223,7 +222,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/market"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -262,7 +261,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/contracts"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -294,7 +293,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/point_value"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -332,7 +331,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/points"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -364,7 +363,7 @@
                         android:layout_weight="0"
                         android:fontFamily="sans-serif"
                         android:text="@string/emotion"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -402,7 +401,7 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif"
                         android:text="@string/total"
-                        android:textColor="#000000"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -414,7 +413,9 @@
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
                         android:background="#FFFFFF"
-                        android:text="@string/cero" />
+                        android:text="@string/cero"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>
