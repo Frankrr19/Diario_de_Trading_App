@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -55,11 +56,48 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVH
                 alertDeleteReview(review).show();
             }
         });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertSeeInfoReview(review).show();
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return objects.size();
+    }
+
+    private AlertDialog alertSeeInfoReview(Review review) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        builder.setCancelable(true);
+
+
+        View reviewView = LayoutInflater.from(context).inflate(R.layout.review_view_alert, null);
+        TextView lblYear = reviewView.findViewById(R.id.lblYearReviewViewAlert);
+        TextView lblDay = reviewView.findViewById(R.id.lblDayReviewViewAlert);
+        TextView lblMonth = reviewView.findViewById(R.id.lblMonthReviewViewAlert);
+        EditText lblTextReview = reviewView.findViewById(R.id.lblMultiReviewReviewViewAlert);
+
+        lblTextReview.setEnabled(true);
+
+        builder.setView(reviewView);
+
+        lblDay.setText(String.valueOf(review.getDay()));
+        lblMonth.setText(review.getMonth());
+        lblYear.setText(String.valueOf(review.getYear()));
+        lblTextReview.setText(review.getText());
+
+        builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        return builder.create();
     }
 
     private AlertDialog alertDeleteReview(Review review) {

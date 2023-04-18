@@ -56,6 +56,7 @@
     <string name="total">TOTAL:</string>
     <string name="titulo_edit_trade">Edit Trade</string>
     <string name="titulo_see_trade">See Trade</string>
+    <string name="titulo_see_review">See Review</string>
     <string name="cerrar">CLOSE</string>
 
     <string-array name="selectState">
