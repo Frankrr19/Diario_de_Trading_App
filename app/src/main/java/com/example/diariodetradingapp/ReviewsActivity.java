@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -113,9 +115,9 @@ public class ReviewsActivity extends AppCompatActivity {
         builder.setPositiveButton("CREAR", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if(spYear.getSelectedItem() != "" &&
-                    spDay.getSelectedItem() != "" &&
-                    spMonth.getSelectedItem() != "" &&
+                if(spYear.getSelectedItem() != "" ||
+                    spDay.getSelectedItem() != "" ||
+                    spMonth.getSelectedItem() != "" ||
                     !txtTextReview.getText().toString().isEmpty()){
                     try {
                         int year = Integer.parseInt(spYear.getSelectedItem().toString());
@@ -129,6 +131,7 @@ public class ReviewsActivity extends AppCompatActivity {
                         dialogInterface.dismiss();
                     }catch (Exception e){
                         Toast.makeText(ReviewsActivity.this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
+                        alertCreateReview().show();
                     }
                 }
             }
@@ -152,6 +155,24 @@ public class ReviewsActivity extends AppCompatActivity {
         startActivity(new Intent(ReviewsActivity.this, HomeActivity.class));
         finish();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.btnConfigUser) {
+            startActivity(new Intent(ReviewsActivity.this, ConfigDatosPersonalesActivity.class));
+            finish();
+        }
+        return true;
+    }
+
     private void initializaComponents() {
         cabecera = findViewById(R.id.cabecera);
         reviews = new ArrayList<>();

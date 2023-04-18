@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diario de trading</string>
+    <string name="app_name">Trading journal</string>
     <string name="email">Email</string>
     <string name="login">LOGIN</string>
     <string name="password">Password</string>
@@ -58,33 +58,47 @@
     <string name="titulo_see_trade">See Trade</string>
     <string name="titulo_see_review">See Review</string>
     <string name="cerrar">CLOSE</string>
+    <string name="real">REAL</string>
+    <string name="simulated">SIMULATED</string>
+    <string name="largo">LONG</string>
+    <string name="corto">SIMULATED</string>
+    <string name="enero">January</string>
+    <string name="febrero">February</string>
+    <string name="marzo">March</string>
+    <string name="abril">April</string>
+    <string name="mayo">May</string>
+    <string name="junio">June</string>
+    <string name="julio">July</string>
+    <string name="agosto">August</string>
+    <string name="septiembre">September</string>
+    <string name="octubre">October</string>
+    <string name="noviembre">November</string>
+    <string name="diciembre">December</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="greed">Greed</string>
+    <string name="confidence">Confidence</string>
+    <string name="censervative">Conservative</string>
+    <string name="fear">Fear</string>
+    <string name="paciencia">Patience</string>
+    <string name="haste">Haste</string>
+    <string name="revenge">Revenge</string>
+    <string name="calm">Calm</string>
 
     <string-array name="selectState">
         <item> </item>
-        <item>Real</item>
-        <item>Simulated</item>
+        <item>@string/real</item>
+        <item>@string/simulated</item>
     </string-array>
 
     <string-array name="selectEntry">
         <item> </item>
-        <item>Long</item>
-        <item>Short</item>
+        <item>@string/largo</item>
+        <item>@string/corto</item>
     </string-array>
 
     <string-array name="selectYear">
         <item> </item>
         <item>2023</item>
-        <item>2024</item>
-        <item>2025</item>
-        <item>2026</item>
-        <item>2027</item>
-        <item>2028</item>
-        <item>2029</item>
-        <item>2030</item>
-        <item>2031</item>
-        <item>2032</item>
-        <item>2033</item>
-        <item>2034</item>
     </string-array>
 
     <string-array name="selectDay">
@@ -124,18 +138,18 @@
 
     <string-array name="selectMonth">
         <item> </item>
-        <item>January</item>
-        <item>February</item>
-        <item>March</item>
-        <item>April</item>
-        <item>May</item>
-        <item>June</item>
-        <item>July</item>
-        <item>August</item>
-        <item>September</item>
-        <item>October</item>
-        <item>November</item>
-        <item>December</item>
+        <item>@string/enero</item>
+        <item>@string/febrero</item>
+        <item>@string/marzo</item>
+        <item>@string/abril</item>
+        <item>@string/mayo</item>
+        <item>@string/junio</item>
+        <item>@string/julio</item>
+        <item>@string/agosto</item>
+        <item>@string/septiembre</item>
+        <item>@string/octubre</item>
+        <item>@string/noviembre</item>
+        <item>@string/diciembre</item>
     </string-array>
 
     <string-array name="selectMarket">
@@ -159,12 +173,8 @@
         <item>Calm</item>
     </string-array>
     <string name="title_activity_review">ReviewActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="name_datos">NAME</string>
+    <string name="apellidos">SURNAME</string>
+    <string name="email_mayus">EMAIL</string>
+    <string name="new_review">NEW REVIEW</string>
 </resources>

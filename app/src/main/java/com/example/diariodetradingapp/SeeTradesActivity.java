@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.diariodetradingapp.adapters.TradesAdapter;
@@ -58,6 +60,18 @@ public class SeeTradesActivity extends AppCompatActivity {
                     GenericTypeIndicator<ArrayList<Trade>> gti = new GenericTypeIndicator<ArrayList<Trade>>() {};
                     ArrayList<Trade> temp = snapshot.getValue(gti);
                     trades.addAll(temp);
+
+                    //ESTO ES LO NUEVO
+                    /*
+                    for (int i = 0; i < trades.size(); i++) {
+                        if (trades.get(i).getEntry().equals("LONG") || trades.get(i).getEntry().equals("LARGO")){
+                            Toast.makeText(SeeTradesActivity.this, "largo"+i, Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(SeeTradesActivity.this, "error"+i, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                     */
                 }
                 adapter.notifyDataSetChanged();
 
@@ -77,5 +91,22 @@ public class SeeTradesActivity extends AppCompatActivity {
     public void onBackPressed() {
         startActivity(new Intent(SeeTradesActivity.this, HomeActivity.class));
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.btnConfigUser) {
+            startActivity(new Intent(SeeTradesActivity.this, ConfigDatosPersonalesActivity.class));
+            finish();
+        }
+        return true;
     }
 }

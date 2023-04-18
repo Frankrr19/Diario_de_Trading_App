@@ -29,7 +29,7 @@
             android:drawableLeft="@android:drawable/ic_input_add"
             android:drawableTint="@color/black"
             android:fontFamily="sans-serif"
-            android:text="NEW REVIEW"
+            android:text="@string/new_review"
             android:textColor="#000000"
             android:textStyle="bold"
             app:cornerRadius="20dp" />
