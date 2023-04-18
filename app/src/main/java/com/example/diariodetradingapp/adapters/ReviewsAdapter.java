@@ -47,7 +47,7 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVH
     public void onBindViewHolder(@NonNull ReviewVH holder, int position) {
         Review review = objects.get(position);
         holder.lblDay.setText(String.valueOf(review.getDay()));
-        holder.lblDay.setText(review.getMonth());
+        holder.lblMonth.setText(review.getMonth());
         holder.lblYear.setText(String.valueOf(review.getYear()));
 
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
