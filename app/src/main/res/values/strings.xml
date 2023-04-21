@@ -162,15 +162,15 @@
 
     <string-array name="selectEmotion">
         <item> </item>
-        <item>Anxiety</item>
-        <item>Greed</item>
-        <item>Confidence</item>
-        <item>Conservative</item>
-        <item>Fear</item>
-        <item>Patience</item>
-        <item>Haste</item>
-        <item>Revenge</item>
-        <item>Calm</item>
+        <item>@string/anxiety</item>
+        <item>@string/greed</item>
+        <item>@string/confidence</item>
+        <item>@string/censervative</item>
+        <item>@string/fear</item>
+        <item>@string/paciencia</item>
+        <item>@string/haste</item>
+        <item>@string/revenge</item>
+        <item>@string/calm</item>
     </string-array>
     <string name="title_activity_review">ReviewActivity</string>
     <string name="name_datos">NAME</string>
