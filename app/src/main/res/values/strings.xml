@@ -61,7 +61,7 @@
     <string name="real">REAL</string>
     <string name="simulated">SIMULATED</string>
     <string name="largo">LONG</string>
-    <string name="corto">SIMULATED</string>
+    <string name="corto">SHORT</string>
     <string name="enero">January</string>
     <string name="febrero">February</string>
     <string name="marzo">March</string>
@@ -177,4 +177,6 @@
     <string name="apellidos">SURNAME</string>
     <string name="email_mayus">EMAIL</string>
     <string name="new_review">NEW REVIEW</string>
+    <string name="profit">PROFIT:</string>
+    <string name="stoploss">STOP:</string>
 </resources>

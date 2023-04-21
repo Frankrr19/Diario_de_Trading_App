@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.diariodetradingapp.databinding.ActivityCreateTradeBinding;
+import com.example.diariodetradingapp.modelos.Constantes;
 import com.example.diariodetradingapp.modelos.Trade;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -72,6 +73,57 @@ public class CreateTradeActivity extends AppCompatActivity {
     }
 
     private void crearTrade() {
+        if (binding.rbProfitCreateTrade.isChecked()){
+            positiveTrade();
+        }
+        else{
+            if (binding.rbStopLossCreateTrade.isChecked()){
+                negativeTrade();
+            }
+        }
+
+    }
+
+    private void negativeTrade() {
+        if (binding.spEstateCreateTrade.getSelectedItem() != "" ||
+                binding.spEntryCreateTrade.getSelectedItem() != "" ||
+                binding.spYearCreateTrade.getSelectedItem() != "" ||
+                binding.spDayCreateTrade.getSelectedItem() != "" ||
+                binding.spMonthCreateTrade.getSelectedItem() != "" ||
+                binding.spMarketCreateTrade.getSelectedItem() != "" ||
+                !binding.txtContractsCreateTrade.getText().toString().isEmpty() ||
+                !binding.txtPointValueCreateTrade.getText().toString().isEmpty() ||
+                !binding.txtPointsCreateTrade.getText().toString().isEmpty() ||
+                binding.spEmotionCreateTrade.getSelectedItem() != ""){
+            try {
+                String state = binding.spEstateCreateTrade.getSelectedItem().toString();
+                String entry = binding.spEntryCreateTrade.getSelectedItem().toString();
+                int year = Integer.parseInt(binding.spYearCreateTrade.getSelectedItem().toString());
+                int day = Integer.parseInt(binding.spDayCreateTrade.getSelectedItem().toString());
+                String month = binding.spMonthCreateTrade.getSelectedItem().toString();
+                String market = binding.spMarketCreateTrade.getSelectedItem().toString();
+                float contracts = Float.parseFloat(binding.txtContractsCreateTrade.getText().toString());
+                float pointValue = Float.parseFloat(binding.txtPointValueCreateTrade.getText().toString());
+                float points = Float.parseFloat(binding.txtPointsCreateTrade.getText().toString());
+                String emotion = binding.spEmotionCreateTrade.getSelectedItem().toString();
+                Boolean takeProfitOrLoss = false;
+                String stopLoss = Constantes.STOP;
+                String takeProfit = "";
+
+
+
+                Trade trade = new Trade(state,entry,year,day,month,market,contracts,pointValue,points,emotion,stopLoss,takeProfit,takeProfitOrLoss);
+                trades.add(trade);
+                refUser.setValue(trades);
+                startActivity(new Intent(CreateTradeActivity.this, HomeActivity.class));
+                finish();
+            }catch (Exception e){
+                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void positiveTrade() {
         if (binding.spEstateCreateTrade.getSelectedItem() != "" ||
             binding.spEntryCreateTrade.getSelectedItem() != "" ||
             binding.spYearCreateTrade.getSelectedItem() != "" ||
@@ -93,8 +145,11 @@ public class CreateTradeActivity extends AppCompatActivity {
                 float pointValue = Float.parseFloat(binding.txtPointValueCreateTrade.getText().toString());
                 float points = Float.parseFloat(binding.txtPointsCreateTrade.getText().toString());
                 String emotion = binding.spEmotionCreateTrade.getSelectedItem().toString();
+                Boolean takeProfitOrLoss = true;
+                String stopLoss = "";
+                String takeProfit = Constantes.PROFIT;
 
-                Trade trade = new Trade(state, entry, year, day, month, market, contracts, pointValue, points, emotion);
+                Trade trade = new Trade(state,entry,year,day,month,market,contracts,pointValue,points,emotion,stopLoss,takeProfit,takeProfitOrLoss);
                 trades.add(trade);
                 refUser.setValue(trades);
                 startActivity(new Intent(CreateTradeActivity.this, HomeActivity.class));

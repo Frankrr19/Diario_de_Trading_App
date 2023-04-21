@@ -12,11 +12,14 @@ public class Trade {
     private Float points;
     private String emotion;
     private Float total;
+    private String stopLoss;
+    private String takeProfit;
+    private Boolean takeProfitOrLoss;
 
     public Trade() {
     }
 
-    public Trade(String state, String entry, int year, int day, String month, String market, Float contracts, Float pointValue, Float points, String emotion) {
+    public Trade(String state, String entry, int year, int day, String month, String market, Float contracts, Float pointValue, Float points, String emotion, String stopLoss, String takeProfit, Boolean takeProfitOrLoss) {
         this.state = state;
         this.entry = entry;
         this.year = year;
@@ -27,7 +30,20 @@ public class Trade {
         this.pointValue = pointValue;
         this.points = points;
         this.emotion = emotion;
-        this.total = this.contracts * this.pointValue * this.points;
+        this.stopLoss = stopLoss;
+        this.takeProfit = takeProfit;
+        this.takeProfitOrLoss = takeProfitOrLoss;
+        this.total = calculateTotal(this.contracts, this.pointValue, this.points, this.takeProfitOrLoss);
+    }
+
+    private Float calculateTotal(Float contracts, Float pointValue, Float points, Boolean takeProfitOrLoss) {
+        float total = 0;
+        if (takeProfitOrLoss){
+            total = contracts * pointValue * points;
+        }else{
+            total = (contracts * pointValue * points) * (-1);
+        }
+        return total;
     }
 
     public String getState() {
@@ -116,5 +132,21 @@ public class Trade {
 
     public void setTotal(Float total) {
         this.total = total;
+    }
+
+    public String getStopLoss() {
+        return stopLoss;
+    }
+
+    public void setStopLoss(String stopLoss) {
+        this.stopLoss = stopLoss;
+    }
+
+    public String getTakeProfit() {
+        return takeProfit;
+    }
+
+    public void setTakeProfit(String takeProfit) {
+        this.takeProfit = takeProfit;
     }
 }

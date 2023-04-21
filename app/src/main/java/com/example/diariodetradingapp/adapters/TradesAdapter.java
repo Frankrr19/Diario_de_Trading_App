@@ -82,6 +82,8 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
         TextView lblPointValue = tradeView.findViewById(R.id.lblPointValueSeeTrade);
         TextView lblPoints = tradeView.findViewById(R.id.lblPointsSeeTrade);
         TextView lblEmotion = tradeView.findViewById(R.id.lblEmotionSeeTrade);
+        TextView lblProfit = tradeView.findViewById(R.id.lblProfitSeeTrade);
+        TextView lblStop = tradeView.findViewById(R.id.lblStopSeeTrade);
         TextView lblTotal = tradeView.findViewById(R.id.lblTotalEditTrade);
         builder.setView(tradeView);
 
@@ -95,6 +97,8 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
         lblPointValue.setText(String.valueOf(trade.getPointValue()));
         lblPoints.setText(String.valueOf(trade.getPoints()));
         lblEmotion.setText(trade.getEmotion());
+        lblProfit.setText(trade.getTakeProfit());
+        lblStop.setText(trade.getStopLoss());
         lblTotal.setText(String.valueOf(trade.getTotal())+" $");
 
         builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
@@ -105,31 +109,6 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
         });
         return builder.create();
     }
-
-    //initializaSpinners(spEstateEditTrade, spEntryEditTrade, spYearEditTrade, spDayEditTrade, spMonthEditTrade, spMarketEditTrade, spEmotionEditTrade);
-    private void initializaSpinners(Spinner spEstateEditTrade, Spinner spEntryEditTrade, Spinner spYearEditTrade, Spinner spDayEditTrade, Spinner spMonthEditTrade, Spinner spMarketEditTrade, Spinner spEmotionEditTrade) {
-        ArrayAdapter<CharSequence> adapterState = ArrayAdapter.createFromResource(context, R.array.selectState, android.R.layout.simple_spinner_item);
-        spEstateEditTrade.setAdapter(adapterState);
-
-        ArrayAdapter<CharSequence> adapterEntry = ArrayAdapter.createFromResource(context, R.array.selectEntry, android.R.layout.simple_spinner_item);
-        spEntryEditTrade.setAdapter(adapterEntry);
-
-        ArrayAdapter<CharSequence> adapterYear = ArrayAdapter.createFromResource(context, R.array.selectYear, android.R.layout.simple_spinner_item);
-        spYearEditTrade.setAdapter(adapterYear);
-
-        ArrayAdapter<CharSequence> adapterDay = ArrayAdapter.createFromResource(context, R.array.selectDay, android.R.layout.simple_spinner_item);
-        spDayEditTrade.setAdapter(adapterDay);
-
-        ArrayAdapter<CharSequence> adapterMonth = ArrayAdapter.createFromResource(context, R.array.selectMonth, android.R.layout.simple_spinner_item);
-        spMonthEditTrade.setAdapter(adapterMonth);
-
-        ArrayAdapter<CharSequence> adapterMarket = ArrayAdapter.createFromResource(context, R.array.selectMarket, android.R.layout.simple_spinner_item);
-        spMarketEditTrade.setAdapter(adapterMarket);
-
-        ArrayAdapter<CharSequence> adapterEmotion = ArrayAdapter.createFromResource(context, R.array.selectEmotion, android.R.layout.simple_spinner_item);
-        spEmotionEditTrade.setAdapter(adapterEmotion);
-    }
-
 
     private AlertDialog alertDeleteTrade(Trade trade) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

@@ -66,7 +66,7 @@
     <string name="real">REAL</string>
     <string name="simulated">SIMULADO</string>
     <string name="largo">LARGO</string>
-    <string name="corto">SIMULADO</string>
+    <string name="corto">CORTO</string>
     <string name="enero">Enero</string>
     <string name="febrero">Febrero</string>
     <string name="marzo">Marzo</string>
@@ -88,4 +88,6 @@
     <string name="haste">Prisas</string>
     <string name="revenge">Revancha</string>
     <string name="calm">Calma</string>
+    <string name="profit">PROFIT:</string>
+    <string name="stoploss">STOP:</string>
 </resources>
