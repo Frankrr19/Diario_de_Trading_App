@@ -110,8 +110,6 @@ public class CreateTradeActivity extends AppCompatActivity {
                 String stopLoss = Constantes.STOP;
                 String takeProfit = "";
 
-
-
                 Trade trade = new Trade(state,entry,year,day,month,market,contracts,pointValue,points,emotion,stopLoss,takeProfit,takeProfitOrLoss);
                 trades.add(trade);
                 refUser.setValue(trades);

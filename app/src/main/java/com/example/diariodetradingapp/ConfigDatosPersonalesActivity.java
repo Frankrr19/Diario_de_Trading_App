@@ -28,9 +28,14 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
     private EditText txtName;
     private EditText txtLastname;
     private EditText txtEmail;
+    private EditText txtInitialCash;
     private Button btnSave;
     private Button btnLogOut;
     private String a;
+    private String name;
+    private String lastName;
+    private String email;
+    private Float cash;
     private FirebaseDatabase database;
     private DatabaseReference refUser;
 
@@ -50,8 +55,12 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!txtName.getText().toString().isEmpty() || !txtLastname.getText().toString().isEmpty() || !txtEmail.getText().toString().isEmpty()){
-                    User user = new User(txtName.getText().toString(), txtLastname.getText().toString(), txtEmail.getText().toString());
+                if (!txtName.getText().toString().isEmpty() || !txtLastname.getText().toString().isEmpty() || !txtEmail.getText().toString().isEmpty() || !txtInitialCash.getText().toString().isEmpty()){
+                    name = txtName.getText().toString();
+                    lastName = txtLastname.getText().toString();
+                    email = txtEmail.getText().toString();
+                    cash = Float.valueOf(txtInitialCash.getText().toString());
+                    User user = new User(name, lastName, email, cash);
                     refUser.setValue(user);
                     startActivity(new Intent(ConfigDatosPersonalesActivity.this, HomeActivity.class));
                     finish();
@@ -88,6 +97,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
                     txtName.setText(snapshot.child("name").getValue().toString());
                     txtLastname.setText(snapshot.child("lastname").getValue().toString());
                     txtEmail.setText(snapshot.child("email").getValue().toString());
+                    txtInitialCash.setText(snapshot.child("initialCash").getValue().toString());
                 }
             }
 
@@ -108,6 +118,7 @@ public class ConfigDatosPersonalesActivity extends AppCompatActivity {
         txtName = findViewById(R.id.txtNameCDPActivity);
         txtLastname = findViewById(R.id.txtLastnameCDPActivity);
         txtEmail = findViewById(R.id.txtEmailCDPActivity);
+        txtInitialCash = findViewById(R.id.txtInitialCashDatosPersonales);
         btnSave = findViewById(R.id.btnSaveCDPActivity);
         btnLogOut = findViewById(R.id.btnLogOutCDPActivity);
         a = "a";

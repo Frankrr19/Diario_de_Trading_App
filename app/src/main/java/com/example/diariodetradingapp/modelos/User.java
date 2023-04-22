@@ -2,13 +2,15 @@ package com.example.diariodetradingapp.modelos;
 
 public class User {
     private String name;
-    private String Lastname;
+    private String lastname;
     private String email;
+    private Float initialCash;
 
-    public User(String name, String lastname, String email) {
+    public User(String name, String lastname, String email, Float initialCash) {
         this.name = name;
-        Lastname = lastname;
+        this.lastname = lastname;
         this.email = email;
+        this.initialCash = initialCash;
     }
 
     public User() {
@@ -23,11 +25,11 @@ public class User {
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
     public void setLastname(String lastname) {
-        Lastname = lastname;
+        lastname = lastname;
     }
 
     public String getEmail() {
@@ -38,11 +40,19 @@ public class User {
         this.email = email;
     }
 
+    public Float getInitialCash() {
+        return initialCash;
+    }
+
+    public void setInitialCash(Float initialCash) {
+        this.initialCash = initialCash;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", Lastname='" + Lastname + '\'' +
+                ", Lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

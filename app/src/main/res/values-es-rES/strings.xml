@@ -90,4 +90,8 @@
     <string name="calm">Calma</string>
     <string name="profit">PROFIT:</string>
     <string name="stoploss">STOP:</string>
+    <string name="stats_title_activity">ESTADÍSTICAS</string>
+    <string name="stop_loss_stats">PÉRDIDAS:</string>
+    <string name="profits_stats">BENEFICIOS:</string>
+    <string name="initial_cash">SALDO INICIAL:</string>
 </resources>

@@ -62,7 +62,16 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        binding.imgStatsActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, StatsActivity.class));
+                finish();
+            }
+        });
     }
+
     /*
     private void readUserConfig() {
         refUser.addValueEventListener(new ValueEventListener() {

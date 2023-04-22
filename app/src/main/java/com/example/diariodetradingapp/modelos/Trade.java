@@ -149,4 +149,12 @@ public class Trade {
     public void setTakeProfit(String takeProfit) {
         this.takeProfit = takeProfit;
     }
+
+    public Boolean getTakeProfitOrLoss() {
+        return takeProfitOrLoss;
+    }
+
+    public void setTakeProfitOrLoss(Boolean takeProfitOrLoss) {
+        this.takeProfitOrLoss = takeProfitOrLoss;
+    }
 }

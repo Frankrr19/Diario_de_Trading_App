@@ -179,4 +179,8 @@
     <string name="new_review">NEW REVIEW</string>
     <string name="profit">PROFIT:</string>
     <string name="stoploss">STOP:</string>
+    <string name="stats_title_activity">STATS</string>
+    <string name="stop_loss_stats">STOP LOSS:</string>
+    <string name="profits_stats">PROFITS:</string>
+    <string name="initial_cash">INITIAL CASH:</string>
 </resources>
