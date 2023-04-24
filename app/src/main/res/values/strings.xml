@@ -183,4 +183,5 @@
     <string name="stop_loss_stats">STOP LOSS:</string>
     <string name="profits_stats">PROFITS:</string>
     <string name="initial_cash">INITIAL CASH:</string>
+    <string name="economic_results">ECONOMIC RESULTS</string>
 </resources>

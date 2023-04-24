@@ -94,4 +94,5 @@
     <string name="stop_loss_stats">PÉRDIDAS:</string>
     <string name="profits_stats">BENEFICIOS:</string>
     <string name="initial_cash">SALDO INICIAL:</string>
+    <string name="economic_results">RESULTADOS ECONÓMINOS</string>
 </resources>

@@ -36,6 +36,23 @@ public class Trade {
         this.total = calculateTotal(this.contracts, this.pointValue, this.points, this.takeProfitOrLoss);
     }
 
+    public Trade(Trade trade) {
+        state = trade.getState();
+        entry = trade.getEntry();
+        year = trade.getYear();
+        day = trade.getDay();
+        month = trade.getMonth();
+        market = trade.getMarket();
+        contracts = trade.getContracts();
+        pointValue = trade.getPointValue();
+        points = trade.getPoints();
+        emotion = trade.getEmotion();
+        stopLoss = trade.getStopLoss();
+        takeProfit = trade.getTakeProfit();
+        takeProfitOrLoss = trade.getTakeProfitOrLoss();
+        total = trade.getTotal();
+    }
+
     private Float calculateTotal(Float contracts, Float pointValue, Float points, Boolean takeProfitOrLoss) {
         float total = 0;
         if (takeProfitOrLoss){
@@ -152,6 +169,26 @@ public class Trade {
 
     public Boolean getTakeProfitOrLoss() {
         return takeProfitOrLoss;
+    }
+
+    @Override
+    public String toString() {
+        return "Trade{" +
+                "state='" + state + '\'' +
+                ", entry='" + entry + '\'' +
+                ", year=" + year +
+                ", day=" + day +
+                ", month='" + month + '\'' +
+                ", market='" + market + '\'' +
+                ", contracts=" + contracts +
+                ", pointValue=" + pointValue +
+                ", points=" + points +
+                ", emotion='" + emotion + '\'' +
+                ", total=" + total +
+                ", stopLoss='" + stopLoss + '\'' +
+                ", takeProfit='" + takeProfit + '\'' +
+                ", takeProfitOrLoss=" + takeProfitOrLoss +
+                '}';
     }
 
     public void setTakeProfitOrLoss(Boolean takeProfitOrLoss) {

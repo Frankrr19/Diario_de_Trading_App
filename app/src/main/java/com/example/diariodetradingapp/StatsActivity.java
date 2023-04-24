@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.diariodetradingapp.databinding.ActivityStatsBinding;
+import com.example.diariodetradingapp.modelos.Constantes;
 import com.example.diariodetradingapp.modelos.Stat;
 import com.example.diariodetradingapp.modelos.Trade;
 import com.example.diariodetradingapp.modelos.User;
@@ -31,8 +33,9 @@ public class StatsActivity extends AppCompatActivity {
     private List<Trade> trades;
     private List<User> usuario;
 
-    private Float initialCash;
+    private String initialCash;
     private Float total;
+    private Float saldo;
     private Float profit;
     private Float stop;
     private Float suma;
@@ -49,9 +52,11 @@ public class StatsActivity extends AppCompatActivity {
 
         initializaComponents();
 
-        getInitialCash();
-        binding.lblInitialCashStats.setText(String.valueOf(initialCash));
-        //getTrades();
+        try {
+            getInitialCash();
+        }catch (NumberFormatException e){
+            Toast.makeText(this, ""+e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+        }
 
         binding.btnOcultarCollapseEconomics.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +84,28 @@ public class StatsActivity extends AppCompatActivity {
                     GenericTypeIndicator<ArrayList<Trade>> gti = new GenericTypeIndicator<ArrayList<Trade>>() {};
                     ArrayList<Trade> temp = snapshot.getValue(gti);
                     trades.addAll(temp);
+
+                    int n = trades.size();
+                    Trade trade = new Trade();
+                    for (int i = 0; i < trades.size(); i++) {
+                        trade = trades.get(i);
+                        if (trade.getTakeProfit().equals(Constantes.PROFIT)){
+                            profit = trade.getTotal();
+                            profit++;
+                        }else{
+                            stop = trade.getTotal();
+                            stop++;
+                        }
+                    }
+
+                    stop -= 1;
+                    profit -= 1;
+
+                    suma = (profit + stop) + saldo;
+
+                    binding.lblProfitsStats.setText(String.valueOf(profit));
+                    binding.lblStopLossStats.setText(String.valueOf(stop));
+                    binding.lblTotalStats.setText(String.valueOf(suma));
                 }
             }
 
@@ -87,22 +114,6 @@ public class StatsActivity extends AppCompatActivity {
                 Toast.makeText(StatsActivity.this, "error ", Toast.LENGTH_LONG).show();
             }
         });
-        for (int i = 0; i < trades.size(); i++) {
-            Trade trade = trades.get(i);
-            if (trade.getTakeProfitOrLoss() == true){
-                profit = trade.getTotal();
-                profit++;
-            }else{
-                stop = trade.getTotal();
-                stop++;
-            }
-        }
-        suma = (profit + stop);
-        total = suma + initialCash;
-        binding.lblInitialCashStats.setText(String.valueOf(initialCash));
-        binding.lblProfitsStats.setText(String.valueOf(profit));
-        binding.lblStopLossStats.setText(String.valueOf(stop));
-        binding.lblTotalStats.setText(String.valueOf(total));
     }
 
     private void getInitialCash() {
@@ -111,12 +122,17 @@ public class StatsActivity extends AppCompatActivity {
         refUser.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                usuario.clear();
                 if (snapshot.exists()){
-                    GenericTypeIndicator<User> gti = new GenericTypeIndicator<User>() {};
-                    User user = snapshot.getValue(gti);
-
-                    initialCash = user.getInitialCash();
+                    try {
+                        initialCash = snapshot.child("initialCash").getValue().toString();
+                        Log.d("initialCash", initialCash);
+                        saldo = Float.parseFloat(initialCash);
+                        Log.d("saldo", ""+saldo);
+                        binding.lblInitialCashStats.setText(initialCash);
+                        getTrades();
+                    }catch (Exception e){
+                        Toast.makeText(StatsActivity.this, ""+e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
@@ -125,7 +141,6 @@ public class StatsActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     private void initializaComponents() {

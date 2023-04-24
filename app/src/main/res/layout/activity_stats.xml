@@ -47,7 +47,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="ECONOMIC RESULTS"
+                    android:text="@string/economic_results"
                     android:textAlignment="center"
                     android:textColor="@color/green"
                     android:textSize="18sp"
