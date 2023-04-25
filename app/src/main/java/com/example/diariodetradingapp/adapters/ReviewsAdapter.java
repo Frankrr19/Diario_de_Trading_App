@@ -14,9 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.diariodetradingapp.R;
-import com.example.diariodetradingapp.ReviewsActivity;
 import com.example.diariodetradingapp.modelos.Review;
-import com.example.diariodetradingapp.modelos.Trade;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.List;
@@ -46,6 +44,7 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVH
     @Override
     public void onBindViewHolder(@NonNull ReviewVH holder, int position) {
         Review review = objects.get(position);
+        holder.lblName.setText("REVIEW: "+(position+1));
         holder.lblDay.setText(String.valueOf(review.getDay()));
         holder.lblMonth.setText(review.getMonth());
         holder.lblYear.setText(String.valueOf(review.getYear()));
@@ -122,10 +121,11 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVH
     }
 
     public class ReviewVH  extends RecyclerView.ViewHolder {
-        TextView lblDay, lblMonth, lblYear;
+        TextView lblName, lblDay, lblMonth, lblYear;
         ImageButton btnDelete;
         public ReviewVH(@NonNull View itemView) {
             super(itemView);
+            lblName = itemView.findViewById(R.id.lblNameReviewVH);
             lblDay = itemView.findViewById(R.id.lblDayReviewVH);
             lblMonth = itemView.findViewById(R.id.lblMonthReviewVH);
             lblYear = itemView.findViewById(R.id.lblYearReviewVH);

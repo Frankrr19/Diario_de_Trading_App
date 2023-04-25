@@ -2,14 +2,10 @@ package com.example.diariodetradingapp.adapters;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -47,6 +43,7 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
     @Override
     public void onBindViewHolder(@NonNull TradeVH holder, int position) {
         Trade trade = objects.get(position);
+        holder.lblName.setText("TRADE: "+ (position +1));
         holder.lblDay.setText(String.valueOf(trade.getDay()));
         holder.lblMonth.setText(trade.getMonth());
         holder.lblYear.setText(String.valueOf(trade.getYear()));
@@ -137,10 +134,11 @@ public class TradesAdapter extends RecyclerView.Adapter<TradesAdapter.TradeVH> {
     }
 
     public class TradeVH extends RecyclerView.ViewHolder {
-        TextView lblDay, lblMonth, lblYear;
+        TextView lblName, lblDay, lblMonth, lblYear;
         ImageButton btnDelete;
         public TradeVH(@NonNull View itemView) {
             super(itemView);
+            lblName = itemView.findViewById(R.id.lblNameTradeVH);
             lblDay = itemView.findViewById(R.id.lblDayVH);
             lblMonth = itemView.findViewById(R.id.lblMonthVH);
             lblYear = itemView.findViewById(R.id.lblYearVH);

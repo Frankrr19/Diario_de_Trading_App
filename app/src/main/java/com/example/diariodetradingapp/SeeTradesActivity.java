@@ -61,17 +61,6 @@ public class SeeTradesActivity extends AppCompatActivity {
                     ArrayList<Trade> temp = snapshot.getValue(gti);
                     trades.addAll(temp);
 
-                    //ESTO ES LO NUEVO
-                    /*
-                    for (int i = 0; i < trades.size(); i++) {
-                        if (trades.get(i).getEntry().equals("LONG") || trades.get(i).getEntry().equals("LARGO")){
-                            Toast.makeText(SeeTradesActivity.this, "largo"+i, Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(SeeTradesActivity.this, "error"+i, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                     */
                 }
                 adapter.notifyDataSetChanged();
 

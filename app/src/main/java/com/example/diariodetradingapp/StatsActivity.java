@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,11 +35,14 @@ public class StatsActivity extends AppCompatActivity {
     private List<User> usuario;
 
     private String initialCash;
-    private Float total;
     private Float saldo;
     private Float profit;
+    private Float profit2 = (float)0;
     private Float stop;
+    private Float stop2 = (float)0;
     private Float suma;
+    private Float sumaStops;
+    private Float total;
 
     private FirebaseDatabase database;
     private DatabaseReference refUser;
@@ -85,27 +89,24 @@ public class StatsActivity extends AppCompatActivity {
                     ArrayList<Trade> temp = snapshot.getValue(gti);
                     trades.addAll(temp);
 
-                    int n = trades.size();
                     Trade trade = new Trade();
                     for (int i = 0; i < trades.size(); i++) {
                         trade = trades.get(i);
                         if (trade.getTakeProfit().equals(Constantes.PROFIT)){
-                            profit = trade.getTotal();
-                            profit++;
+                            profit = trade.getTotal(); //140
+                            suma = (profit + profit2); //suma = 140 + 130
+                            profit2 = suma; //profit2 = 170
                         }else{
                             stop = trade.getTotal();
-                            stop++;
+                            sumaStops = (stop + stop2);
+                            stop2 = sumaStops;
                         }
                     }
 
-                    stop -= 1;
-                    profit -= 1;
-
-                    suma = (profit + stop) + saldo;
-
-                    binding.lblProfitsStats.setText(String.valueOf(profit));
-                    binding.lblStopLossStats.setText(String.valueOf(stop));
-                    binding.lblTotalStats.setText(String.valueOf(suma));
+                    total = (profit2 + stop2)+saldo;
+                    binding.lblProfitsStats.setText(String.valueOf(profit2));
+                    binding.lblStopLossStats.setText(String.valueOf(stop2));
+                    binding.lblTotalStats.setText(String.valueOf(total));
                 }
             }
 
