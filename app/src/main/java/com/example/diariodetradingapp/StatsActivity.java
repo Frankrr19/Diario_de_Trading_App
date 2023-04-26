@@ -42,7 +42,25 @@ public class StatsActivity extends AppCompatActivity {
     private Float suma;
     private Float sumaStops;
     private Float total;
-
+    private Integer ES;
+    private Integer MES;
+    private Integer NQ;
+    private Integer MNQ;
+    private Integer euroDolar;
+    private Integer YM;
+    private Integer MYM;
+    private Integer ZS;
+    private Integer QO;
+    private Integer MGC;
+    private Integer SI;
+    private Integer CL;
+    private Integer MCL;
+    private Integer NG;
+    private Integer FDAX;
+    private Integer FDXM;
+    private Integer FDXS;
+    private Integer FESX;
+    private Integer FSXE;
     private FirebaseDatabase database;
     private DatabaseReference refUser;
 
@@ -75,7 +93,6 @@ public class StatsActivity extends AppCompatActivity {
             }
         });
     }
-
     private void getTrades() {
         refUser = database.getReference(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("lista_trades");
 

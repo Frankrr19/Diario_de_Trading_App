@@ -154,10 +154,25 @@
 
     <string-array name="selectMarket">
         <item> </item>
-        <item>SP 500 (ES)</item>
-        <item>NasDaq (NQ)</item>
-        <item>Dow Jones (YM)</item>
-        <item>Crude Oil (CL)</item>
+        <item>E-MINI SP 500 FUTURES (ES)</item>
+        <item>MICRO SP 500 FUTURES (MES)</item>
+        <item>E-MINI NasDaq 100 FUTURES (NQ)</item>
+        <item>MICRO NasDaq 100 FUTURES (MNQ)</item>
+        <item>EURO FUTURE (6E)</item>
+        <item>E-MINI Dow Jones INDEX (YM)</item>
+        <item>MICRO E-MINI Dow Jones INDEX (MYM)</item>
+        <item>SOYBEAN FUTURES (ZS)</item>
+        <item>E-MINI GOLD FUTURES (QO)</item>
+        <item>MICRO GOLD FUTURES (MGC)</item>
+        <item>SILVER FUTURES (SI)</item>
+        <item>Crude Oil FUTURES (CL)</item>
+        <item>MICRO Crude Oil FUTURES(MCL)</item>
+        <item>NATURAL GAS (NG)</item>
+        <item>DAX (FDAX)</item>
+        <item>MINI DAX (FDXM)</item>
+        <item>MICRO DAX (FDXS)</item>
+        <item>STOXX (FESX)</item>
+        <item>MICRO STOXX (FSXE)</item>
     </string-array>
 
     <string-array name="selectEmotion">
@@ -184,4 +199,7 @@
     <string name="profits_stats">PROFITS:</string>
     <string name="initial_cash">INITIAL CASH:</string>
     <string name="economic_results">ECONOMIC RESULTS</string>
+    <string name="market_data">MARKET DATA:</string>
+    <string name="market_Stats">MARKET:</string>
+    <string name="favorite_market">FAVORITE MARKET</string>
 </resources>
