@@ -172,6 +172,7 @@
         <item>MINI DAX (FDXM)</item>
         <item>MICRO DAX (FDXS)</item>
         <item>STOXX (FESX)</item>
+        <item>MICRO STOXX (FSXE)</item>
     </string-array>
 
     <string-array name="selectEmotion">
