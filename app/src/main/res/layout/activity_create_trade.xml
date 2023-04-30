@@ -43,8 +43,9 @@
 
             <RadioGroup
                 android:id="@+id/rdgTipoEntrada"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -137,7 +138,8 @@
                         android:layout_margin="10dp"
                         android:layout_weight="10"
                         android:background="#FFFFFF"
-                        android:backgroundTint="#FFFFFF" />
+                        android:backgroundTint="#FFFFFF"
+                        android:fadeScrollbars="false" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -267,7 +269,8 @@
                         android:layout_margin="10dp"
                         android:layout_weight="10"
                         android:background="#FFFFFF"
-                        android:backgroundTint="#FFFFFF" />
+                        android:backgroundTint="#FFFFFF"
+                        android:fadeScrollbars="false" />
                 </LinearLayout>
 
             </LinearLayout>
